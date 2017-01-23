@@ -10,24 +10,30 @@ order: 3.1
 
 The Lounge implements most of the IRC commands you may be familiar with. Here's a list of commands you can use:
 
-## /clear
+## `/away [<message>]`
+
+Mark yourself as away and set your away message. If you omit the message, an empty one is used.
+
+Example: `/away Making quiche`
+
+## `/back`
+
+Remove your away status (after `/away [<message>]`).
+
+## `/clear`
 
 Clear the current screen.
 
-Example: `/clear`
-
-## /close
+## `/close`
 
 Close the current window.
-
-Example: `/close`
 
 Aliases:
 
 - [/leave](#leave)
 - [/part](#part)
 
-## /connect
+## `/connect <hostname>`
 
 Connect to a new network.
 
@@ -37,143 +43,137 @@ Aliases:
 
 - [/server](#server)
 
-## /deop
+## `/deop <nick>`
 
 Remove op (-o) from a user in the current channel.
 
 Example: `/deop john`
 
-## /devoice
+## `/devoice <nick>`
 
 Remove voice (-v) from a user in the current channel.
 
 Example: `/devoice john`
 
-## /disconnect
+## `/disconnect`
 
 Disconnect from the current network.
 
-Example: `/disconnect`
-
-## /invite
+## `/invite <nick> <channel>`
 
 Invite a user to the specified channel.
 
 Example: `/invite john #chan`
 
-## /join
+## `/join <channel>`
 
 Join a channel.
 
 Example: `/join #chan`
 
-## /kick
+## `/kick <nick>`
 
 Kick a user from the specified channel.
 
 Example: `/kick john`
 
-## /leave
+## `/leave`
 
 Leave the current channel or query.
-
-Example: `/leave`
 
 Aliases:
 
 - [/close](#close)
 - [/part](#part)
 
-## /me
+## `/me <message>`
 
 Send an `ACTION` message to the current channel.
 
 Example: `/me likes chocolate`
 
-## /mode
+## `/mode <modes> <nick>`
 
 Set the user mode in the current channel.
 
 Example: `/mode +o john`
 
-## /msg
+## `/msg <channel> <message>`
 
 Send a message to the specified channel.
 
 Example: `/msg #chan Hello!`
 
-## /nick
+## `/nick <new-nick>`
 
 Change your nickname on the current network.
 
 Example: `/nick john`
 
-## /notice
+## `/notice <nick> <message>`
 
 Sends a notice message to the specified user.
 
 Example: `/notice john Hello!`
 
-## /op
+## `/op <nick>`
 
 Make user op (+o) in the current channel.
 
 Example: `/op john`
 
-## /part
+## `/part`
 
 Leave the current channel.
 
-Example: `/part`
-
-## /query
+## `/query <nick> <message>`
 
 Send a private message to the specified user.
 
 Example: `/query john Hello!`
 
-## /quit
+## `/quit`
 
 Disconnect from the current network.
 
-Example: `/quit`
+## `/quote <raw-message>`
 
-## /quote
+See `/raw`.
 
-Example: `/quote`
+Example: `/quote AWAY :Eating quiche`
 
 Aliases:
 
 - [/raw](#raw)
 - [/send](#send)
 
-## /raw
+## `/raw <raw-message>`
 
 Send a raw message to the current IRC network.
 
-Example: `/raw`
+Example: `/raw AWAY :Cleaning dishes`
 
 Aliases:
 
 - [/quote](#quote)
 - [/send](#send)
 
-## /say
+## `/say <message>`
 
 Send a message to the current channel.
 
 Example: `/say Hello!`
 
-## /send
+## `/send <raw-message>`
 
-Example: `/send`
+Example: `/send BACK`
 
 Aliases:
 
 - [/quote](#quote)
 - [/raw](#raw)
 
-## /server
+## `/server <hostname>`
 
 Connect to a new network.
 
@@ -183,25 +183,25 @@ Aliases:
 
 - [/connect](#connect)
 
-## /slap
+## `/slap <nick>`
 
 Slap someone in the current channel. With a trout!
 
 Example: `/slap john`
 
-## /topic
+## `/topic <topic>`
 
 Set the topic in the current channel.
 
 Example: `/topic Hello!`
 
-## /voice
+## `/voice <nick>`
 
 Give a user voice (+v) in the current channel.
 
 Example: `/voice john`
 
-## /whois
+## `/whois <nick>`
 
 Whois a user on the current network.
 
